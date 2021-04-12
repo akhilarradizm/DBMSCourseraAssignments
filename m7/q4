@@ -1,0 +1,9 @@
+
+(Redundant foreign keys)
+Normally the problem can be resolved by removing the redundant foreign keys (Entity2.Attribute1-1,4-1). If the attribute does not represent a foreign key, it should be renamed instead of removed. 
+
+(Weak entity rule)
+Weak entity should be connected to atleast one identifying relationship. Not shown in entity 6. To resolve error either convert weak entity to strong entity or connect a identifying relationship with strong entity.
+
+(Identifying relationship rule)
+Atleast one weak entity should be present when connected with an identifying relationship. (rel 1,2,3,4,6)To resolve error by adding one or more weak entities or making the relationship non-identifying

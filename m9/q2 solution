@@ -1,0 +1,23 @@
+(Missing Attribute)
+The Vehicle entity is missing an attribute specifying the transmission type, thus the VehTransType attribute has been added.
+
+(Ambiguous naming)
+Customer entity does not differentiate between the customer's cellphone number and primary phone number, CustPhone has therefore been changed to CustCellPhone and CustPrimaryPhone.
+
+(Strong Entity)
+The Account entity is defined as a weak entity, although it does not depend on Expense or Payment entities, and has therefore been changed to a strong entity type.
+
+(Composite Primary Key)
+Because the customer can make multiple payments on the same invoice, the PayMethod attribute has also been added as part of the primary key for the Payment entity.
+
+(Ambiguous Relationships) 
+The problem statement does not specify any relationship between the employee entity and vehicle entity, nor the payment entity and the vehicle entity. Those relationships have therefore been removed.
+
+
+(Cardinalities)
+The cardinalities specified from Expense to Account have been changed because an Account can have more than one expense, and an Expense has exactly one associated Account. However a newly created Account may have no expenses yet and so the minimum cardinality from Account to Expense is zero.
+
+The problem statement clearly specifies that each Payment is associated with exactly one account, therefore the cardinality has been changed to a min and max of one from Payment to Account. The maximum cardinality from Account to Payment should also be many because an account can make multiple payments.
+
+
+The Employee entity specifies a minimum cardinality of one on the Payment entity. This has been changed to zero because if a newly hired employee does not make a sale or process any payments, they will not have a Payment.
